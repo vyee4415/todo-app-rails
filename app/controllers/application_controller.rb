@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
   
   def hello 
     render html: "Hello CodeNow!" 
+    render  html: "http://cdn2.business2community.com/wp-content/uploads/2011/03/1095867_56160494.jpg"
   end
+ 
 end
