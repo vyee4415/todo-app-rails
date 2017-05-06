@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def hello
-    render html: "http://cdn2.business2community.com/wp-content/uploads/2011/03/1095867_56160494.jpg"
+    render html: "<img src='http://cdn2.business2community.com/wp-content/uploads/2011/03/1095867_56160494.jpg'>"
   end
  
 end
