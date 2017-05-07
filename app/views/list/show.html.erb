@@ -1,5 +1,5 @@
 <head>
-    <title>HELLO WORLD</title>
+    <title><%=@list_name%></title>
     <style>
         body {
             background-color:#B95AC7;
@@ -21,9 +21,6 @@
             width: 50%;
             float: right;
         }
-        .delete {
-            float:right;
-        }
         #list {
             float: right;
             padding-right: 200px;
@@ -31,11 +28,12 @@
     </style>
 </head>
 <body>
-    <h1>TO DO LIST</h1>
+    <h1><%=@list_name%></h1>
+    <marquee>hello people and welcome to this awesome to do list :))</marquee>
+    <marquee><img src="https://media3.giphy.com/media/1hiVNxD34TpC0/giphy.gif"></marquee>
         <form>
             <input type="text" id="info"></input>
             <button type="button" value="add to list" id="add" onclick="myfunction()">Click me</button>
-            <a class="delete" href="https://todo-app-rails-vyee4415.c9users.io/list/index?">Delete all</a>
             <table style="width=30%">
                 <tr>    
                 <form>
