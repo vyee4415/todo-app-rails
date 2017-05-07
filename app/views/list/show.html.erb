@@ -1,0 +1,68 @@
+<head>
+    <title>HELLO WORLD</title>
+    <style>
+        body {
+            background-color:#B95AC7;
+        }
+        h1 {
+            border-bottom: 6px solid black;
+            padding: 5px;
+        }
+        li {
+            border:2px solid black;
+            padding:3px;
+            margin-right:40px;
+        }
+        .inline {
+            display:inline
+        }
+        .image {
+            position: absolute;
+            width: 50%;
+            float: right;
+        }
+        .delete {
+            float:right;
+        }
+        #list {
+            float: right;
+            padding-right: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TO DO LIST</h1>
+        <form>
+            <input type="text" id="info"></input>
+            <button type="button" value="add to list" id="add" onclick="myfunction()">Click me</button>
+            <a class="delete" href="https://todo-app-rails-vyee4415.c9users.io/list/index?">Delete all</a>
+            <table style="width=30%">
+                <tr>    
+                <form>
+                    <ul id="list">
+                        <% @todos.each do |todo| %>
+                            <li>
+                                <%= todo[:name] %> -- <%= todo[:is_checked] %>
+                                <input type="checkbox"<% if todo[:is_checked] %>checked<% end %> />
+                            </li>
+                        <% end %>
+                    </ul>
+                </form>
+                </tr>
+                </table>
+            <script type="text/javascript">
+                function myfunction() {
+                    var text=document.getElementById("info").value;
+                    var li = document.createElement("div");
+                    li.innerHTML= "<li>" + text + "<input type='checkbox'>" + "</li>";
+                    document.getElementById("list").appendChild(li);
+                }
+            </script>
+        </form>
+        <p></p>
+        <img class="image inline" src="https://media3.giphy.com/media/xTiTnJ3BooiDs8dL7W/giphy.gif">
+</body>
+
+
+
+
